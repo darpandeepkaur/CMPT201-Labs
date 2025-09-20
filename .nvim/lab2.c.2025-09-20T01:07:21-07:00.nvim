@@ -20,8 +20,6 @@ int main() {
     exit(EXIT_FAILURE);
   }
 
-  printf("input: %s \n", line);
-
   if (line[read - 1] == '\n')
     line[read - 1] = '\0';
 
@@ -35,4 +33,5 @@ int main() {
 
   free(line);
   return 0;
+
 }
