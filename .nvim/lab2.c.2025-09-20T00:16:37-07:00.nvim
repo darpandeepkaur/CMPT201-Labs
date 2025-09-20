@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h> 
+
+int main() {
+  bool = true;
+  char input[50];
+
+  printf("Enter program to run. \n");
+  getline(input, sizeof(input), stdin);
+  printf("input: %s", input);
+
+  printf("input: %s", input);
+  execl("/", input, NULL);
+}

@@ -1,0 +1,23 @@
+#define _POSIX_C_SOURCE 200809L
+#include <stdbool.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+int main() {
+  bool check = true;
+  char *line = NULL;
+  int len = 0;
+  char *read;
+
+  while (check == true) {
+    printf("Enter program to run. \n");
+    read = getline(&line, &len, stdin);
+    printf("input: %s", read);
+
+    printf("input: %s", read);
+    execl("/", read, NULL);
+  }
+  free(line);
+}

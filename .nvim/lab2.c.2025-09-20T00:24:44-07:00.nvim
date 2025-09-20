@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdbool.h>
+
+int main() {
+  bool check = true;
+  char input[20];
+
+  while(check == true){
+    printf("Enter program to run. \n");
+    getline(input, sizeof(input), stdin);
+    printf("input: %s", input);
+
+    printf("input: %s", input);
+    execl("/", input, NULL);
+  }
+}

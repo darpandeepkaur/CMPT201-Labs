@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+int main() {
+  char input[50];
+
+  printf("Enter program to run. \n");
+  fgets(input, sizeof(input), stdin);
+  printf("input %s", input);
+
+  char *args[] = {"/", input, NULL};
+  execv("/", args);
+}
